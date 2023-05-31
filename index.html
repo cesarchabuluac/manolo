@@ -8,6 +8,9 @@
     <title>Brenda y Manolo</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js"
         integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19"
         crossorigin="anonymous"></script>
@@ -28,6 +31,27 @@
             }
             .simplescrollup__button--hide {
                 transform: translateX(100px);
+            }
+            @media (max-width: 1268px) {
+                .letra {
+                    top: 0;
+                    left: 10px;
+                    text-align: center;
+                    width: 100%;
+                    object-fit: fill;
+                    transition: opacity 0.5s;
+                    margin: 0 auto;
+                }
+            }
+            @media (max-width: 992px) {
+                .letra {
+                    top: 0;
+                    left: 0;
+                    margin:  0 auto;
+                    width: 100%;
+                    object-fit: fill;
+                    transition: opacity 0.5s;
+                }
             }
         </style>
 </head>
@@ -60,9 +84,9 @@
     <!-- THIRD -->
     <div id="itinerario">
         <div class="row">
-            <div class="col-6">
+            <div class="col-md-6 col-lg-6 col-sm-12 mb-4">
                 <div class="itinerary">
-                    <p class="title">ITINERARIO</p>
+                    <p class="title text-md-center">ITINERARIO</p>
                     <span><strong>VIERNES 28 DE JULIO 2023</strong></span>
                     <span><strong>Cóctel de bienvenida</strong></span>
                     <span><strong>7:30 pm</strong></span>
@@ -87,7 +111,7 @@
 
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-md-6 col-lg-6 col-sm-12">
                 <div class="image-third">
                     <img
                         src="assets/img/people/1.jpg">
@@ -140,252 +164,240 @@
 
     <!-- FIFTH -->
     <div id="hospedaje" class="fifth">
-        <p class="titleH">HOSPEDAJE</p>
-        <div class="columna3">
-            <div class="colh">
-                <h2><i>Peña de Bernal <br> Hotel Casa Mateo</i></h2>
-                <img class="img1" src="assets/img/hotel-mateo.png">
+        <p class="titleH text-4xl  sm:text-3xl md:text-4xl lg:text-6xl">HOSPEDAJE</p>
+        <div class="columna grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-5 text-center">
+            <div class="">
+                <div class="relative mb-3 flex justify-center items-center ">
+                    <img class="object-cover w-0\.5 rounded-full sm:w-96 md:w-full lg:w-full opacity-50 transition-opacity duration-300" src="assets/img/hotel-mateo.png">
+                    <h2 class="hover:hidden absolute inset-0 flex items-center w-0\.5 justify-center text-center sm:text-left text-dark text-2xl sm:text-3xl font-bold"><i>Peña de Bernal <br> Hotel Casa Mateo</i></h2>
+                </div>
+                <div class="">
+                    <span>Clave del Convenio:</span>
+                    <span><strong>BRENDA Y MANOLO</strong></span>
+                    <p>Tel: <i><a href="tel:+524412964472">+52 441 296 4472</a></i></p>
+                    <p><i>Dirección</i></p>
+                    <p><span>Zona Centro, 76680 Bernal, Qro.</span></p>
+                    <p><a target="_blank" href="https://goo.gl/maps/9cTPiJtbeZBxjUUw8?coh=178571&entry=tt"><i>VER MAPA</i></a></p>
+                </div>
             </div>
-
-            <div class="colh">
-                <h2><i><i>Peña de Bernal <br> Hotel de Piedra</i></i></h2>
-                <img class="img1" src="assets/img/hotel-piedra-agua.png">               
+            <div class="">
+                <div class="relative mb-3 flex justify-center items-center">
+                    <h2 class="hover:hidden absolute inset-0 flex items-center w-0\.5 justify-center text-center sm:text-left text-dark text-2xl sm:text-3xl font-bold"><i><i>Peña de Bernal <br> Hotel de Piedra</i></i></h2>
+                    <img class="object-cover w-0\.5 rounded-full sm:w-96 md:w-full lg:w-full opacity-50 transition-opacity duration-300" src="assets/img/hotel-piedra-agua.png">               
+                </div>
+                <div class="">
+                    <span>Clave del Convenio:</span>                
+                    <span><strong>BRENDA Y MANOLO</strong></span>
+                    <p>Tel: <i><a href="tel:+524412964680">+52 441 296 4680</a></i></p>
+                    <p>Dirección</p>
+                    <p><span>De La Corregidora 67, El Gallito, 76680 Bernal, Qro.</span></p>
+                    <a target="_blank" href="https://goo.gl/maps/6tnzSYp4F2sWehXu5?coh=178571&entry=tt"><i>VER MAPA</i></a>
+                </div>
             </div>
-
-            <div class="colh">
-                <h2><i>Queretaro <br> Hotel Doña Urraca <small>Hotel Sede</small></i></h2>
-                <img class="img3"
-                    src="assets/img/donia-urraca-1.png">
+            <div class="">
+                <div class="relative mb-3 flex justify-center items-center">
+                    <h2 class="hover:hidden absolute inset-0 flex items-center w-0\.5 justify-center text-center sm:text-left text-dark text-2xl sm:text-3xl font-bold"><i>Queretaro <br> Hotel Doña Urraca <br><small>Hotel Sede</small></i></h2>
+                    <img class="object-cover w-0\.5 rounded-full sm:w-96 md:w-full lg:w-full opacity-50 transition-opacity duration-300"
+                        src="assets/img/donia-urraca-1.png">
+                </div>
+                <!-- Queretaro -->
+                <div class="">
+                    <span>Clave del Convenio:</span>
+                    <span><strong>BRENDA Y MANOLO</strong></span>
+                    <p>Tel: <i><a href="tel:+524422385400">+52 442 238 5400</a></i></p>
+                    <p><i>Dirección</i></p>
+                    <span> C. 5 de Mayo 117, La Santa Cruz,</span>
+                    <p><span>La Cruz, 76000 Santiago de Querétaro, Qro.</span></p>                
+                    <p><a target="_blank" href="https://goo.gl/maps/oMnjRcNnciKCj8rP9?coh=178571&entry=tt"><i>VER MAPA</i></a></p>
+                </div>
             </div>
-        </div>
-
-        <div class="columna3">
-            <div class="colh">
-                <span>Clave del Convenio:</span>
-                <span><strong>BRENDA Y MANOLO</strong></span>
-                <p>Tel: <i><a href="tel:+524412964472">+52 441 296 4472</a></i></p>
-                <p><i>Dirección</i></p>
-                <p><span>Zona Centro, 76680 Bernal, Qro.</span></p>
-                <p><a target="_blank" href="https://goo.gl/maps/9cTPiJtbeZBxjUUw8?coh=178571&entry=tt"><i>VER MAPA</i></a></p>
+            <div class="">
+                <div class="relative mb-3 flex justify-center items-center">
+                    <h2 class="hover:hidden absolute inset-0 flex items-center w-0\.5 justify-center text-center sm:text-left text-dark text-2xl sm:text-3xl font-bold"><i>Queretaro <br> Aloft</i></h2>
+                    <img class="object-cover w-0\.5 rounded-full sm:w-96 md:w-full lg:w-full opacity-50 transition-opacity duration-300"
+                        src="assets/img/aloft.png">
+                </div>
+                <div class="">
+                    <span>Clave del Convenio:</span>
+                    <span><strong>BRENDA Y MANOLO</strong></span>
+                    <p>Tel: <i><a href="tel:+524424049000">+52 442 404 9000</a></i></p>
+                    <p><i>Dirección</i></p>
+                    <span>Carretera Queretaro-San Luis Potosi 10617 Col El Salitre,</span>
+                    <p><span>Jurica, 76127 Santiago de Querétaro, Qro.</span></p>
+                    <p><a target="_blank" href="https://goo.gl/maps/1T1AJ9vR3UwWwTJQ7?coh=178571&entry=tt"><i>VER MAPA</i></a></p>
+                </div>
             </div>
-
-            <div class="colh">
-                <span>Clave del Convenio:</span>                
-                <span><strong>BRENDA Y MANOLO</strong></span>
-                <p>Tel: <i><a href="tel:+524412964680">+52 441 296 4680</a></i></p>
-                <p>Dirección</p>
-                <p><span>De La Corregidora 67, El Gallito, 76680 Bernal, Qro.</span></p>
-                <a target="_blank" href="https://goo.gl/maps/6tnzSYp4F2sWehXu5?coh=178571&entry=tt"><i>VER MAPA</i></a>
+            <div class="">
+                <div class="relative mb-3 flex justify-center items-center">
+                    <h2 class="hover:hidden absolute inset-0 flex items-center w-0\.5 justify-center text-center sm:text-left text-dark text-2xl sm:text-3xl font-bold"><i>Queretaro <br> Grand Fiesta <br> Americana Querétaro</i></h2>
+                    <img class="object-cover w-0\.5 rounded-full sm:w-96 md:w-full lg:w-full opacity-50 transition-opacity duration-300"
+                        src="assets/img/fiesta-americana.png">
+                </div>
+                <div class="">
+                    <span>Clave del Convenio:</span>
+                    <span><strong>G1O6CQ@FQO</strong></span>
+                    <p>Tel: <i><a href="tel:8005045000">800 504 5000</a></i></p>
+                    <p>Tel: <i><a href="tel:+524423929787">+52 442 392 9787</a></i></p>
+                    <p><i>Dirección</i></p>
+                    <span>Blvd. Bernardo Quintana 4050, Plaza Boulevares,</span>
+                    <p><span>76160 Santiago de Querétaro, Qro.</span></p>
+                    <p><a target="_blank" href="https://goo.gl/maps/Vf5JFndUzbAh8RVX7?coh=178571&entry=tt"><i>VER MAPA</i></a></p>
+                </div>
             </div>
-
-            <!-- Queretaro -->
-            <div class="colh">
-                <span>Clave del Convenio:</span>
-                <span><strong>BRENDA Y MANOLO</strong></span>
-                <p>Tel: <i><a href="tel:+524422385400">+52 442 238 5400</a></i></p>
-                <p><i>Dirección</i></p>
-                <span> C. 5 de Mayo 117, La Santa Cruz,</span>
-                <p><span>La Cruz, 76000 Santiago de Querétaro, Qro.</span></p>                
-                <p><a target="_blank" href="https://goo.gl/maps/oMnjRcNnciKCj8rP9?coh=178571&entry=tt"><i>VER MAPA</i></a></p>
+            <div class="">
+                <div class="relative mb-3 flex justify-center items-center">
+                    <h2 class="hover:hidden absolute inset-0 flex items-center w-0\.5 justify-center text-center sm:text-left text-dark text-2xl sm:text-3xl font-bold"><i>Queretaro <br> Holiday Inn <br> Queretaro Zona Krystal</i></h2>
+                    <img class="object-cover w-0\.5 rounded-full sm:w-96 md:w-full lg:w-full opacity-50 transition-opacity duration-300"
+                        src="assets/img/holiday-inn.png">
+                </div>
+                <div class="">
+                    <span>Clave del Convenio:</span>
+                    <span><strong>BODA BRENDA Y MANOLO</strong></span>
+                    <p>Tel: <i><a href="tel:14425611805">1 442 561 1805</a></i></p>                
+                    <p><i>Dirección</i></p>
+                    <span>Km. 11 Carretera Queretaro-San Luis Potosi,</span>
+                    <p><span>76100 Santiago de Querétaro, Qro.</span></p>                
+                    <p><a target="_blank" href="https://goo.gl/maps/xxMDLuGXjE8Hjs8k7?coh=178571&entry=tt"><i>VER MAPA</i></a></p>
+                </div>
             </div>
-        </div>
-
-        <!--  -->
-        <div class="columna3">
-            <div class="colh">
-                <h2><i>Queretaro <br> Aloft</i></h2>
-                <img class="img1"
-                    src="assets/img/aloft.png">
-            </div>
-
-            <div class="colh">
-                <h2><i>Queretaro <br> Grand Fiesta Americana Querétaro</i></h2>
-                <img class="img1"
-                    src="assets/img/fiesta-americana.png">
-            </div>
-
-            <div class="colh">
-                <h2><i>Queretaro <br> Holiday Inn Queretaro Zona Krystal</i></h2>
-                <img class="img1"
-                    src="assets/img/holiday-inn.png">
-            </div>
-        </div>
-        <div class="columna3">
-            <div class="colh">
-                <span>Clave del Convenio:</span>
-                <span><strong>BRENDA Y MANOLO</strong></span>
-                <p>Tel: <i><a href="tel:+524424049000">+52 442 404 9000</a></i></p>
-                <p><i>Dirección</i></p>
-                <span>Carretera Queretaro-San Luis Potosi 10617 Col El Salitre,</span>
-                <p><span>Jurica, 76127 Santiago de Querétaro, Qro.</span></p>
-                <p><a target="_blank" href="https://goo.gl/maps/1T1AJ9vR3UwWwTJQ7?coh=178571&entry=tt"><i>VER MAPA</i></a></p>
-            </div>
-
-            <div class="colh">
-                <span>Clave del Convenio:</span>
-                <span><strong>G1O6CQ@FQO</strong></span>
-                <p>Tel: <i><a href="tel:8005045000">800 504 5000</a></i></p>
-                <p>Tel: <i><a href="tel:+524423929787">+52 442 392 9787</a></i></p>
-                <p><i>Dirección</i></p>
-                <span>Blvd. Bernardo Quintana 4050, Plaza Boulevares,</span>
-                <p><span>76160 Santiago de Querétaro, Qro.</span></p>
-                <p><a target="_blank" href="https://goo.gl/maps/Vf5JFndUzbAh8RVX7?coh=178571&entry=tt"><i>VER MAPA</i></a></p>
-            </div>
-
-            <div class="colh">
-                <span>Clave del Convenio:</span>
-                <span><strong>BODA BRENDA Y MANOLO</strong></span>
-                <p>Tel: <i><a href="tel:14425611805">1 442 561 1805</a></i></p>                
-                <p><i>Dirección</i></p>
-                <span>Km. 11 Carretera Queretaro-San Luis Potosi,</span>
-                <p><span>76100 Santiago de Querétaro, Qro.</span></p>                
-                <p><a target="_blank" href="https://goo.gl/maps/xxMDLuGXjE8Hjs8k7?coh=178571&entry=tt"><i>VER MAPA</i></a></p>
-            </div>
-        </div>
-
-        <div class="columna3">
-            <div class="colh">
-                <h2><i>Queretaro <br> Fujitaya</i></h2>
-                <img class="img1"
-                    src="assets/img/fujitaya.png">
-            </div>
-        </div>
-
-        <div class="columna3">
-            <div class="colh">
-                <span>Clave del Convenio:</span>
-                <span><strong>BODA BRENDA Y MANOLO</strong></span>
-                <p>Tel: <i><a href="tel:+524428029410">+52 442 802 9410</a></i></p>
-                <p><i>Dirección</i></p>
-                <span>Av Sta Rosa 5001, Privada</span>
-                <p><span>Juriquilla, 76100 Juriquilla, Qro., México</span></p>
-                <p><a target="_blank" href="https://maps.app.goo.gl/XfHyoHKC8dtscVaJ6?g_st=iw"><i>VER MAPA</i></a></p>
+            <div class="">
+                <div class=" relative mb-3 flex justify-center items-center">
+                    <h2 class="hover:hidden absolute inset-0 flex items-center w-0\.5 justify-center text-center sm:text-left text-dark text-2xl sm:text-3xl font-bold"><i>Queretaro <br> Fujitaya</i></h2>
+                    <img class="object-cover w-0\.5 rounded-full sm:w-96 md:w-full lg:w-full opacity-50 transition-opacity duration-300"
+                        src="assets/img/fujitaya.png">
+                </div>
+                <div class="">
+                    <span>Clave del Convenio:</span>
+                    <span><strong>BODA BRENDA Y MANOLO</strong></span>
+                    <p>Tel: <i><a href="tel:+524428029410">+52 442 802 9410</a></i></p>
+                    <p><i>Dirección</i></p>
+                    <span>Av Sta Rosa 5001, Privada</span>
+                    <p><span>Juriquilla, 76100 Juriquilla, Qro., México</span></p>
+                    <p><a target="_blank" href="https://maps.app.goo.gl/XfHyoHKC8dtscVaJ6?g_st=iw"><i>VER MAPA</i></a></p>
+                </div>
             </div>
         </div>
-    </div>
-
-
-    <!-- SIXTH -->
-    <!-- <img class="centro"
+        
+        <!-- SIXTH -->
+        <!-- <img class="centro"
         src="assets/img/bm_letras_fecha-removebg-preview.png"> -->
 
-    <!-- SEVENTH -->
-    <div id="transporte" class="seventh center-text">
-        <div class="itinerary">
-            <p class="titleH">TRANSPORTE</p>
-            <div class="center-text2">
-                <span>Transportes Ayala</span>
-                <p>Contaremos con transportes para facilitar los traslados a los invitados.</p>
-                <!-- <br />
-                <span>CIUDAD DE MÉXICO - CUERNAVACA</span>
-                <span>Del aeropuerto de Ciudad de México a Cuernavaca se hacen aproximadamente 1:15hr.</span>
-                <span>Recomendación de transporte privado llegando a México:</span>
-                <p><i>CUERNATOURS</i></p>
-                <p>Código de tarifa especial: Boda Lucia y Carlos</p>
-                <br />
-                <span>BODA 4 DE MARZO</span>
-                <span>Transporte redondo incluido de los hoteles sede a Jardín Agua Viva.</span>
-                <p>Horarios de transporte:</p>
-                <p>PRÓXIMAMENTE PUBLICAREMOS LOS HORARIOS DE CADA UNO.</p> -->
+        <!-- SEVENTH -->
+        <div id="transporte" class="seventh center-text pb-48">
+            <div class="itinerary">
+                <p class="titleH text-4xl sm:text-5xl md:text-6xl mb-4">TRANSPORTE</p>
+                <div class="text-center">
+                    <span class="text-2xl sm\:text-3xl md:text-4xl mb-4">Transportes Ayala</span>
+                    <p class="">Contaremos con transportes para facilitar los traslados a los invitados.</p>
+                    <!-- <br />
+                    <span>CIUDAD DE MÉXICO - CUERNAVACA</span>
+                    <span>Del aeropuerto de Ciudad de México a Cuernavaca se hacen aproximadamente 1:15hr.</span>
+                    <span>Recomendación de transporte privado llegando a México:</span>
+                    <p><i>CUERNATOURS</i></p>
+                    <p>Código de tarifa especial: Boda Lucia y Carlos</p>
+                    <br />
+                    <span>BODA 4 DE MARZO</span>
+                    <span>Transporte redondo incluido de los hoteles sede a Jardín Agua Viva.</span>
+                    <p>Horarios de transporte:</p>
+                    <p>PRÓXIMAMENTE PUBLICAREMOS LOS HORARIOS DE CADA UNO.</p> -->
+                </div>
             </div>
         </div>
-    </div>
-    <!-- EIGHTH -->
-    <div id="mesa-de-regalos" class="eighth">
-        <img class="leaf"
-            src="assets/img/leaf-transparent.webp">
-        <div class="itinerary">
-            <p class="titleH mt-5"><br>SUGERENCIA DE REGALOS</p>
-            <div class="center-text3">
-                <p>El mejor regalo que nos pueden dar es su presencia. Asimismo, agradecemos sus atenciones y ponemos a
-                    su
-                    disposición nuestras mesas de regalos.</p><br />
+
+        
+<!-- EIGHTH -->
+<div id="mesa-de-regalos" class="eighth">
+    <div class="itinerary relative flex flex-col items-center justify-center text-center space-y-8 pb-20 pt-20">
+        <img class="align-self-start leafs absolute w-50 top-0 sm:w-25" src="assets/img/leaf-transparent.webp">
+        <p class="titleH mt-5 titleH text-4xl sm:text-5xl md:text-6xl mb-4"><br>SUGERENCIA DE REGALOS</p>
+        <div class="items-center w-50  space-y-6">
+            <p class="whitespace-wrap ">El mejor regalo que nos pueden dar es su presencia. Asimismo, agradecemos sus atenciones y ponemos a su disposición nuestras mesas de regalos.</p><br />
+            <div class="">
                 <button class="btn">REGALA SHOP</button>
-                <p><a target="_blank" href="https://www.regalashop.com.mx/">https://www.regalashop.com.mx</a></p>
-                <p>ID: 1184</p>               
+                <p ><a target="_blank" class="whitespace-normal text-sm" href="https://www.regalashop.com.mx/">https://www.regalashop.com.mx</a></p>
+                <p>ID: 1184</p>
                 <!-- <p><i>*Referencia poner nombre y apellido</i></p> -->
             </div>
         </div>
-        <img class="leaf2"
-            src="assets/img/leaf-transparent.webp">
+        <img class="leaf2s w-50 align-self-end" src="assets/img/leaf-transparent.webp">
+    </div>
     </div>
     <div class="mt-1"></div>
     <!-- NINTH -->
-    <div id="turismo" class="ninth">
-        <p class="recom">TURISMO SUGERIDO</p>
-        <img class="centro"
-            src="assets/img/fondo-tenth.webp">
- 
-            <div class="detail-r">                
-                <span><i>TURISMO</i></span>
-                <div class="part2">
-                    <div class="partes">
-                        <p><u>Viñedo freixenet </u> </p>
-                        <p><u>Viñedo puerta del lobo </u></p>
-                        <p><u>Centro Histórico </u></p>
-                    </div> 
-                </div>
-                <span><i>PUEBLOS CERCANOS</i></span>
-                <div class="part3">
-                    <div class="partes">
-                        <p><u>Tequisquiapan </u></p>
-                        <p><u>Peña de bernal </u></p>
-                    </div>                    
-                </div>
-            </div>        
-           
-        
-        <img class="leaf3"
-            src="assets/img/leaf3.webp">
-        <br /><br />
-
-        <div class="detail-r">
-            <span><i>RESTAURANTES</i></span>
+    <div id="turismo" class="ninth pb-16">
+    <p class="recom">TURISMO SUGERIDO</p>
+    <img class="centro"
+        src="assets/img/fondo-tenth.webp">
+    
+        <div class="detail-r flex flex-col">                
+            <span><i>TURISMO</i></span>
             <div class="part2">
                 <div class="partes">
-                    <p><u>Hacienda la laborcilla</u> </p>
-                    <p><u>Hacienda Salitre</u></p>
-                    <p><u>Santomar </u></p>
-                    <p><u>Ave Querétaro</u></p>
-                </div>
-                <div class="partes">
-                    <p><u>Asador Bacanoa</u></p>
-                    <p><u>Mesón de chucho el roto</u></p>
-                    <p><u>La única Qro</u></p>
-                </div>
-            </div>            
-        </div>
-
-        <br><br>
-        <div class="detail-r">
-            <span><i>Hair & Makeup</i></span>
+                    <p><u>Viñedo freixenet </u> </p>
+                    <p><u>Viñedo puerta del lobo </u></p>
+                    <p><u>Centro Histórico </u></p>
+                </div> 
+            </div>
+            <span><i>PUEBLOS CERCANOS</i></span>
             <div class="part3">
                 <div class="partes">
-                    <p>Amairan - <i><u> 442 315 2317</u></i></p>
-                    <p>Faces By Jos <i><u> 442 116 0183</u></i></p>
-                    <p>Andy Parraga <i><u>442 227 5878</u></i></p>
-                    <p>Moma by Andrea Morin <i><u>52 446 1460 303</u></i></p>
-                    <p>Miriam Salón <i><u> 442 224 1596</u></i></p>                  
-                </div>
+                    <p><u>Tequisquiapan </u></p>
+                    <p><u>Peña de bernal </u></p>
+                </div>                    
             </div>
-        </div>
+        </div>        
+       
+<img class="leaf3"
+src="assets/img/leaf3.webps">
+<br /><br />
+
+<div class="detail-r">
+<span><i>RESTAURANTES</i></span>
+<div class="part2">
+    <div class="partes">
+        <p><u>Hacienda la laborcilla</u> </p>
+        <p><u>Hacienda Salitre</u></p>
+        <p><u>Santomar </u></p>
+        <p><u>Ave Querétaro</u></p>
     </div>
-    <!-- TENTH -->
-    <img class="fondo-tenth"
-        src="assets/img/fondo-tenth.webp">
-    <div class="tenth">
-        <img class="photo"
-            src="assets/img/people/4.jpg" style="height: 475px!important; width: 475!important;">
-        <div class="square">
-            <p>VISITA NUESTRO PERFIL</p>
-            <h5><a href="#"><i class="fab fa-instagram"></i> BODABRENDAYMANOLO</a></h5>
-        </div>
+    <div class="partes">
+        <p><u>Asador Bacanoa</u></p>
+        <p><u>Mesón de chucho el roto</u></p>
+        <p><u>La única Qro</u></p>
     </div>
-    <!-- FOOTER -->
-    <div class="footer">
-        <h1>Brenda y Manolo</h1>
-        <small>©2023 by <a href="https://cesarchabuluac.com">C-Developer</a></small>
+</div>            
+</div>
+
+<br><br>
+<div class="detail-r">
+<span><i>Hair & Makeup</i></span>
+<div class="part3">
+    <div class="partes">
+        <p>Amairan - <i><u> 442 315 2317</u></i></p>
+        <p>Faces By Jos <i><u> 442 116 0183</u></i></p>
+        <p>Andy Parraga <i><u>442 227 5878</u></i></p>
+        <p>Moma by Andrea Morin <i><u>52 446 1460 303</u></i></p>
+        <p>Miriam Salón <i><u> 442 224 1596</u></i></p>                  
     </div>
-    </div>
+</div>
+</div>
+</div>
+<!-- TENTH -->
+<img class="fondo-tenth"
+src="assets/img/fondo-tenth.webp">
+<div class="tenth">
+<img class="photo"
+src="assets/img/people/4.jpg" style="height: 475px!important; width: 475!important;">
+<div class="square">
+<p>VISITA NUESTRO PERFIL</p>
+<h5><a href="#"><i class="fab fa-instagram"></i> BODABRENDAYMANOLO</a></h5>
+</div>
+</div>
+<!-- FOOTER -->
+<div class="footer">
+<h1>Brenda y Manolo</h1>
+<small>©2023 by <a href="https://cesarchabuluac.com">C-Developer</a></small>
+</div>
+</div>
 </body>
 </html>

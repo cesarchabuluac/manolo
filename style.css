@@ -130,9 +130,9 @@ nav {
 }
 
 .itinerary span:first-child {
-    font-size: 2.5em;
+    /* font-size: 2.5em;
+    margin-bottom: 20px; */
     text-transform: uppercase;
-    margin-bottom: 20px;
 }
 
 .itinerary span:nth-child(2) {
@@ -193,7 +193,7 @@ nav {
 
 .titleH {
     color: #4b4329;
-    font-size: 3.5em;
+    /* font-size: 3.5em; */
     font-family: cormorantgaramond-light, cormorantgaramond, cormorant garamond, serif;
     text-align: center;
 }
@@ -231,7 +231,7 @@ nav {
     top: 0;
     left: 0;
     z-index: 0;
-    max-width: 180%;
+    /* max-width: 180%; */
     height: auto;
     border-radius: 50%;
     opacity: 0.5;
@@ -278,7 +278,7 @@ nav {
     position: absolute;
     margin-left: 60%;
     margin-top: -28%;
-    width: 40%;
+    /* width: 40%; */
 }
 
 .center-text3 {
