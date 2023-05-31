@@ -357,6 +357,12 @@ nav {
     transform: rotate(-150deg)
 }
 
+.relative:hover img {
+    opacity: 1 !important;
+}
+.relative:hover i {
+    opacity: 0 !important;
+}
 
 /* Tenth */
 .fondo-tenth {
@@ -371,7 +377,7 @@ nav {
 .tenth {
     background-color: #bcbf99;
     margin-top: -2%;
-    padding: 10%
+    /* padding: 10% */
 }
 
 .photo {
