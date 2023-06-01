@@ -175,7 +175,7 @@ nav {
 
 /* Fifth */
 .fifth {
-    max-width: 980px;
+    /* max-width: 980px; */
     margin: 0 auto;
 }
 
@@ -265,7 +265,7 @@ nav {
 
 /* Eighth */
 .eighth {
-    background-color: #bcbf99;
+    background-color: #c3b091;
 }
 
 .leaf {
@@ -375,7 +375,7 @@ nav {
 }
 
 .tenth {
-    background-color: #bcbf99;
+    background-color: #c3b091;
     margin-top: -2%;
     /* padding: 10% */
 }
